@@ -19,7 +19,7 @@ func main() {
 	}
 }
 
-func hello(res http.ResponseWriter, req *http.Request) {
+func hello(w http.ResponseWriter, req *http.Request) {
 	fmt.Println("--------orig req----------")
 	b, err := httputil.DumpRequest(req, true)
 	fmt.Println(string(b), err)
