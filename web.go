@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"net/http/httputil"
 	"os"
 )
 
@@ -16,5 +17,6 @@ func main() {
 }
 
 func hello(res http.ResponseWriter, req *http.Request) {
-	fmt.Fprintln(res, "hello, heroku")
+	b, err := httputil.DumpRequest(req, true)
+	fmt.Println(string(b), err)
 }
