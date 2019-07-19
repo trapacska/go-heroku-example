@@ -7,7 +7,7 @@ import (
 	"os"
 	"bytes"
 	"io/ioutil"
-	"log"
+	
 )
 
 func main() {
